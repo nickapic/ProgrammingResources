@@ -1,0 +1,16 @@
+.about {
+  &-container {
+    display: flex;
+    margin: 4rem 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  &-paragraph {
+    font-size: 2rem;
+  }
+}

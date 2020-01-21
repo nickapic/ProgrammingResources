@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  justify-content: space-between;
+  margin: 10rem 4rem;
+  &_text-box {
+    font-size: 4.5rem;
+    font-weight: 700;
+    width: 50%;
+  }
+}

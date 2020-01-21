@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  margin: 2rem 4rem;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: white;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.menu-items {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  cursor: pointer;
+}

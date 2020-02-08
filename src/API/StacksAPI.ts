@@ -1,20 +1,25 @@
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 
+/*
 function QueryBuilder(OptionsArr: string[]){ //TODO for later automation
     let URL: string = "";
     let UrlBase = "http://"
 }
+*/
 
 async function SendRequest(){
+    //Response.data.stacks is an array
     let URL: string = "http://resourceshare.herokuapp.com/api/stacks";
 
-    let Response = await axios.get(URL).then(function(response){
-        //console.log(response.data.stacks); //for debug
-        return response.data.stacks;
-    });
-    const ArrLength: number = Response.length;
-    //console.log(Response); //for debug
+    try {
+        var Response: AxiosResponse = await axios.get(URL);    
+    }
+    catch (ex) {
+        console.error("ERROR SendRequest(): " + ex)
+    }
+    //console.log(Response.data.stacks); //for debug
     return Response;
+    
 }
 
 SendRequest(); //for testing will move to QueryBuilder later

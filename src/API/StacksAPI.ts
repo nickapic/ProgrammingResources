@@ -8,18 +8,18 @@ function QueryBuilder(OptionsArr: string[]){ //TODO for later automation
 */
 
 async function SendRequest(){
+    //Response.data.stacks is an array
     let URL: string = "http://resourceshare.herokuapp.com/api/stacks";
 
-    //Response.data.stacks is an array
-    let Response: AxiosResponse = await axios.get(URL);
-    //console.log(Response.data.stacks); //for debug
-
     try {
-        return Response;
+        var Response: AxiosResponse = await axios.get(URL);    
     }
     catch (ex) {
-        console.error("unable to return Promise (GetRequest();)")
+        console.error("ERROR SendRequest(): " + ex)
     }
+    //console.log(Response.data.stacks); //for debug
+    return Response;
+    
 }
 
 SendRequest(); //for testing will move to QueryBuilder later

@@ -13,7 +13,7 @@ async function SendRequest(){
         return response.data.stacks;
     });
     const ArrLength: number = Response.length;
-    console.log(Response);
+    //console.log(Response); //for debug
     return Response;
 }
 

@@ -22,4 +22,9 @@ async function SendRequest(){
     
 }
 
-SendRequest(); //for testing will move to QueryBuilder later
+//SendRequest(); //for debug
+
+/*
+to use the data remove console.log() and pass data as parameter
+SendRequest().then(function(Resp){console.log(Resp.data.stacks)});
+*/

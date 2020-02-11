@@ -26,5 +26,5 @@ async function SendRequest(){
 
 /*
 to use the data remove console.log() and pass data as parameter
-SendRequest().then(function(Resp){console.log(Resp.data.stacks)});
+SendRequest().then(function(Response){console.log(Response.data.stacks)});
 */

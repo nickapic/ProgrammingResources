@@ -1,4 +1,4 @@
-import axios, {AxiosResponse} from "axios";
+import axios, { AxiosResponse } from 'axios';
 
 /*
 function QueryBuilder(OptionsArr: string[]){ //TODO for later automation
@@ -7,19 +7,20 @@ function QueryBuilder(OptionsArr: string[]){ //TODO for later automation
 }
 */
 
-async function SendRequest(){
-    //Response.data.stacks is an array
-    let URL: string = "http://resourceshare.herokuapp.com/api/stacks";
+async function sendRequest() {
+  //Response.data.stacks is an array
+  let URL: string = 'http://resourceshare.herokuapp.com/api/stacks';
 
-    try {
-        var Response: AxiosResponse = await axios.get(URL);    
-    }
-    catch (ex) {
-        console.error("ERROR SendRequest(): " + ex)
-    }
-    //console.log(Response.data.stacks); //for debug
+  try {
+    var Response: AxiosResponse = await axios.get(URL);
+    console.log(Response);
     return Response;
-    
+  } catch (ex) {
+    console.error('ERROR SendRequest(): ' + ex);
+  }
+  //console.log(Response.data.stacks); //for debug
 }
 
-SendRequest(); //for testing will move to QueryBuilder later
+sendRequest(); //for testing will move to QueryBuilder later
+
+export default sendRequest;
